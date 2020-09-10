@@ -1,1 +1,486 @@
-/* You can add global styles to this file, and also import other style files */
+/*******************
+FONT
+*******************/
+
+@font-face {
+    font-family: "Source Code Pro light";
+    src: url(./assets/font/SourceCodePro-Light.ttf);
+}
+
+@font-face {
+    font-family: "Source Code Pro Italic";
+    src: url(./assets/font/SourceCodePro-Italic.ttf);
+}
+
+@font-face {
+    font-family: "Source Code Pro";
+    src: url(./assets/font/SourceCodePro-Regular.ttf);
+}
+
+
+/*******************
+CSS Reset
+*******************/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    line-height: 1;
+    overflow-x: hidden;
+    /* Hide horizontal scrollbar */
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+:focus {
+    outline: 0;
+}
+
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+
+/* En el código HTML es necesario añadir cellspacing="0" a la tabla */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Source Code Pro";
+    font-size: large;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a:visited,
+a:link,
+a:focus,
+a:hover,
+a:active {
+    list-style: none;
+    text-decoration: none;
+}
+
+a {
+    color: inherit;
+}
+
+
+/************ Configuraciones ******************/
+
+h1 {
+    font-size: x-large;
+}
+
+
+/******* NavBar *********/
+
+.navbar {
+    height: 90px;
+}
+
+
+/*****new ****/
+
+.div-pic-1 {
+    width: 100%;
+    height: 300px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.pic-titulo {
+    position: relative;
+    top: -20px;
+    left: 0px;
+    float: right;
+    padding: 4px;
+    color: gray;
+    background-color: rgba(0, 0, 0, 0.123);
+}
+
+.div-pic-2 {
+    width: 100%;
+    height: 200px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.relative {
+    position: relative;
+}
+
+.card-landing {
+    padding-top: 2.5em;
+    padding-bottom: 2em;
+}
+
+.shadow {
+    border: 1px solid rgba(0, 0, 0, .04);
+}
+
+.card {
+    padding: 3em;
+    background-color: #fff;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+#Contactanos {
+    background-image: url('assets/images/groups/cta.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.rotar {
+    transform: rotateZ(-20deg);
+}
+
+
+/*=============================================
+ESCRITORIO (XL revisamos en 1366px en adelante)
+=============================================*/
+
+
+/*
+body {
+    background: rgba(255, 0, 0, 0.5) !important;
+} */
+
+
+/*---------------------------------------------------------------------*/
+
+
+/******************** MEDIA BREAKING POINTS *************************/
+
+@media (min-width: 768px) {
+    .card-landing {
+        margin-top: -40%;
+    }
+    .card-form {
+        margin-top: 40%;
+        margin-left: -17%;
+    }
+}
+
+@media (min-width: 2100px) {
+    .pic-titulo {
+        position: relative;
+        top: -20px;
+        left: -120px;
+    }
+}
+
+
+/*=============================================
+TABLET HORIZONTAL (LG revisamos en 1024px)
+=============================================*/
+
+@media (max-width:1199px) and (min-width:992px) {}
+
+
+/*---------------------------------------------------------------------*/
+
+
+/*=============================================
+TABLET VERTICAL (MD revisamos en 768px)
+=============================================*/
+
+@media (max-width:991px) and (min-width:768px) {
+    .navbar {
+        height: auto;
+    }
+}
+
+
+/*---------------------------------------------------------------------*/
+
+
+/*=============================================
+MÓVIL HORIZONTAL (SM revisamos en 576px)
+=============================================*/
+
+@media (max-width:767px) and (min-width:576px) {
+    .navbar {
+        height: auto;
+    }
+    .navbar-nav {
+        padding: 1px;
+        background: rgba(0, 0, 0, 0.143);
+    }
+    .navbar-nav li a h5 {
+        margin: 0px;
+        text-align: center;
+        color: #fff;
+    }
+    .pic-titulo {
+        display: none;
+    }
+    .card-columns {
+        column-count: 1;
+    }
+}
+
+
+/*---------------------------------------------------------------------*/
+
+
+/*=============================================
+MOVIL VERTICAL (revisamos en 320px)
+=============================================*/
+
+@media screen and (max-width:575px) {
+    h1 {
+        font-size: large;
+    }
+    h5,
+    p {
+        font-size: medium;
+    }
+    .navbar {
+        height: auto;
+    }
+    .navbar-nav {
+        padding: 1px;
+        background: rgba(0, 0, 0, 0.143);
+    }
+    .navbar-nav li a h5 {
+        margin: 0px;
+        text-align: center;
+        color: #fff;
+    }
+    .pic-titulo {
+        display: none;
+    }
+    .card-columns {
+        column-count: 1;
+    }
+}
+
+
+/******************** MEDIA MEDIA BREAKING POINTS  END *************************/
+
+
+/******************** Efecto de colores en los bordes *************************/
+
+
+/******************** -------------------------------- *************************/
+
+.efect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 20px auto;
+    width: 250px;
+    height: 250px;
+    background: white;
+    border-radius: 10px;
+    transition: 1s box-shadow;
+}
+
+.efect:hover {
+    box-shadow: 0 5px 35px 0px rgba(0, 0, 0, .1);
+}
+
+.efect:hover::before,
+.efect:hover::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: #FDA8CF;
+    border-radius: 75px;
+    z-index: -1;
+    animation: 1s clockwise infinite;
+}
+
+.efect:hover:after {
+    background: #F3CE5E;
+    animation: 2s counterclockwise infinite;
+}
+
+@keyframes clockwise {
+    0% {
+        top: -5px;
+        left: 0;
+    }
+    12% {
+        top: -2px;
+        left: 2px;
+    }
+    25% {
+        top: 0;
+        left: 5px;
+    }
+    37% {
+        top: 2px;
+        left: 2px;
+    }
+    50% {
+        top: 5px;
+        left: 0;
+    }
+    62% {
+        top: 2px;
+        left: -2px;
+    }
+    75% {
+        top: 0;
+        left: -5px;
+    }
+    87% {
+        top: -2px;
+        left: -2px;
+    }
+    100% {
+        top: -5px;
+        left: 0;
+    }
+}
+
+@keyframes counterclockwise {
+    0% {
+        top: -5px;
+        right: 0;
+    }
+    12% {
+        top: -2px;
+        right: 2px;
+    }
+    25% {
+        top: 0;
+        right: 5px;
+    }
+    37% {
+        top: 2px;
+        right: 2px;
+    }
+    50% {
+        top: 5px;
+        right: 0;
+    }
+    62% {
+        top: 2px;
+        right: -2px;
+    }
+    75% {
+        top: 0;
+        right: -5px;
+    }
+    87% {
+        top: -2px;
+        right: -2px;
+    }
+    100% {
+        top: -5px;
+        right: 0;
+    }
+}
