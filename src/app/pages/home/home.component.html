@@ -23,7 +23,7 @@
         <div class="card d-inline-block text-center card-landing shadow" style="transform: translate3d(0px, 14px, 0px);">
             <div class="card-body">
                 <h1 class="text-dark mb-4">
-                    Impulsa tus Sueños
+                    Impulsar tus Sueños
                 </h1>
                 <p class="text-xl-nowrap">
                     las majores vitrinas son de 15", 13"...
@@ -99,15 +99,20 @@
     <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-2">
 
 
-        <form class="card card-form shadow">
+        <form ngNativeValidate class="card card-form shadow" [formGroup]="forma" (submit)=registrarVisitor()>
             <div class="form-group">
 
-                <input type="text" class="form-control border-bottom" placeholder="Nombre">
+                <input type="text" class="form-control border-bottom" placeholder="Nombre" formControlName="nombre" required>
 
             </div>
             <div class="form-group">
 
-                <input type="email" class="form-control border-bottom" placeholder="Correo">
+                <input type="text" class="form-control border-bottom" placeholder="Telefono" formControlName="telefono" required>
+
+            </div>
+            <div class="form-group">
+
+                <input type="email" class="form-control border-bottom" placeholder="Correo" formControlName="correo" required>
             </div>
 
             <button type="submit" class="btn btn-outline-dark border-0">Enviar</button>

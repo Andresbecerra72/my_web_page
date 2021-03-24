@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 // Modulos Personalizados
@@ -15,6 +16,7 @@ import { NopagefoundComponent } from './404/nopagefound.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule, // modulo de rutas personalizada
     PagesModule // modulo de paginas
   ],
